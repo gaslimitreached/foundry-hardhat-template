@@ -4,10 +4,10 @@ on:
       - main
   pull_request:
 
-name: unit Tests
+name: Unit Tests
 
 jobs:
-  tests:
+  test:
     runs-on: ubuntu-latest
 
     steps:
