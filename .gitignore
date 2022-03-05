@@ -1,2 +1,6 @@
+.env
+
+artifacts/
 cache/
 out/
+

@@ -1,0 +1,21 @@
+{
+  "name": "houndry",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@cache:cachemonet0x0CF6619/houndry.git",
+  "author": "cachemonet0x0CF6619 <90769841+cachemonet0x0CF6619@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "deploy": "npx hardhat run scripts/deploy.ts"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.5",
+    "@nomiclabs/hardhat-etherscan": "^3.0.3",
+    "@types/node": "^17.0.21",
+    "dotenv": "^16.0.0",
+    "ethers": "^5.5.4",
+    "hardhat": "^2.9.1",
+    "ts-node": "^10.6.0",
+    "typescript": "^4.6.2"
+  }
+}
