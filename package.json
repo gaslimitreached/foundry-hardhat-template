@@ -6,7 +6,12 @@
   "author": "cachemonet0x0CF6619 <90769841+cachemonet0x0CF6619@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
-    "deploy": "npx hardhat run scripts/deploy.ts"
+    "predeploy": "mv src/test . || echo 'nothing to move'",
+    "deploy": "npx hardhat run scripts/deploy.ts",
+    "postdeploy": "mv test src || echo 'nothing to move'",
+    "preverify": "npm run predeploy",
+    "verify": "npx hardhat verify",
+    "postverify": "npm run postdeploy"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.5",
