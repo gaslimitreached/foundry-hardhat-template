@@ -11,10 +11,11 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Install Foundry
-        uses: onbjerg/foundry-toolchain@v1
+      - uses: actions/setup-node@v2
+      - run: yarn
+
+      - uses: onbjerg/foundry-toolchain@v1
         with:
           version: nightly
-
-      - name: Run tests
-        run: forge test
+  
+      - run: forge test
