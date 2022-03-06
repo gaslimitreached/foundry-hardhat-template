@@ -22,9 +22,3 @@ jobs:
       id: slither
       with:
         target: 'src/'
-        sarif: results.sarif
-
-    - name: Upload SARIF file
-      uses: github/codeql-action/upload-sarif@v1
-      with:
-        sarif_file: ${{ steps.slither.outputs.sarif }}
