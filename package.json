@@ -6,6 +6,7 @@
   "author": "cachemonet0x0CF6619 <90769841+cachemonet0x0CF6619@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
+    "lint": "solhint src/**/*.sol",
     "compile": "npx hardhat compile",
     "coverage": "npx hardhat coverage --solcoverjs .solcover.js",
     "deploy": "npx hardhat run scripts/deploy.ts",
