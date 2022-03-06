@@ -1,6 +1,7 @@
 .env
 
 artifacts/
+cache-hardhat/
 cache/
 out/
 

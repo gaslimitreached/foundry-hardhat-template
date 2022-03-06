@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.12;
+pragma solidity >=0.8.10;
 
 import "ds-test/test.sol";
 import "forge-std/Vm.sol";
@@ -20,7 +20,9 @@ contract ContractTest is DSTest {
 
     function setUp() public {
         alice = new User();
+        vm.label(address(alice), "Alice");
         bob = new User();
+        vm.label(address(bob), "Bob");
         nft = new MockNFT();
         mover = new Mover();
 

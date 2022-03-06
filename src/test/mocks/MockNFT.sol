@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.12;
+pragma solidity >=0.8.10;
 
-import "solmate/tokens/ERC721.sol";
+import "@rari-capital/solmate/src/tokens/ERC721.sol";
 
 contract MockNFT is ERC721("Mock NFT", "MOCK") {
 	uint256 public tokenId = 1;
