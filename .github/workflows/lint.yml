@@ -1,4 +1,4 @@
-name: integration
+name: lint
 
 on: [push, pull_request]
 
@@ -10,5 +10,5 @@ jobs:
       - name: Check out
         uses: actions/checkout@v2
       - uses: actions/setup-node@v2
-      - run: yarn
+      - run: yarn add solhint
       - run: yarn lint
