@@ -1,10 +1,4 @@
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-
-name: Unit Tests
+on: [push, pull_request]
 
 jobs:
   test:
@@ -21,4 +15,4 @@ jobs:
           version: nightly
 
       - name: Run tests
-        run: forge test -vvv
+        run: forge test
