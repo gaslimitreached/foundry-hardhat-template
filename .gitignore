@@ -6,3 +6,6 @@ cache/
 out/
 
 node_modules
+
+coverage/
+coverage.json

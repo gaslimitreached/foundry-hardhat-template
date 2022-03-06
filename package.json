@@ -6,9 +6,10 @@
   "author": "cachemonet0x0CF6619 <90769841+cachemonet0x0CF6619@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
-    "integration": "npx hardhat test",
     "compile": "npx hardhat compile",
+    "coverage": "npx hardhat coverage --solcoverjs .solcover.js",
     "deploy": "npx hardhat run scripts/deploy.ts",
+    "integration": "npx hardhat test",
     "verify": "npx hardhat verify"
   },
   "devDependencies": {
@@ -24,6 +25,7 @@
     "hardhat": "^2.9.1",
     "hardhat-gas-reporter": "^1.0.8",
     "mocha": "^9.2.1",
+    "solidity-coverage": "^0.7.20",
     "toml": "^3.0.0",
     "ts-node": "^10.6.0",
     "typescript": "^4.6.2"
