@@ -4,6 +4,7 @@ import { readFileSync } from 'fs';
 import * as toml from 'toml';
 import '@nomiclabs/hardhat-ethers';
 import '@nomiclabs/hardhat-etherscan';
+import 'hardhat-gas-reporter';
 import { HardhatUserConfig, subtask } from 'hardhat/config';
 import { TASK_COMPILE_SOLIDITY_GET_SOURCE_PATHS } from 'hardhat/builtin-tasks/task-names';
 
@@ -56,6 +57,13 @@ const config: HardhatUserConfig = {
         runs: foundry.default?.optimizer_runs || 200,
       },
     },
+  },
+  gasReporter: {
+    currency: 'USD',
+    gasPrice: 77,
+    excludeContracts: ['src/test'],
+    // API key for CoinMarketCap. https://pro.coinmarketcap.com/signup
+    coinmarketcap: process.env.CMC_KEY ?? '',
   },
   etherscan: {
     // API key for Etherscan. https://etherscan.io/
