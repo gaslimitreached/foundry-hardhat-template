@@ -46,9 +46,7 @@ On [Hardhat's website](https://hardhat.org) you will find:
 integration
 |- mover.test.ts - "Hardhat integration tests"
 lib
-|- ds-test - "Test dependency"
 |- forge-std - "Test dependency"
-|- solmate - "Test dependency"
 scripts
 `- deploy.ts - "hardhat deploy script"
 src
@@ -113,3 +111,17 @@ Scripts available via `npm run-script`:
   verify
     npx hardhat verify
 ```
+## Adding dependency
+
+Prefer `npm` packages when available and update the remappings.
+
+### Example
+
+install:
+`yarn add -D @openzeppelin/contracts`
+
+remapping:
+`@openzeppelin/contracts=node_modules/@openzeppelin/contracts`
+
+import:
+`import "@openzeppelin/contracts/token/ERC20/ERC20.sol";`
